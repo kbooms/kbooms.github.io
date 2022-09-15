@@ -1,11 +1,12 @@
 body {
     background-color: #000f32;
+    color: white;
 }
 
 #header {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "banner banner navmenu"
         "banner banner navmenu";
     padding: 10px;
@@ -20,7 +21,7 @@ body {
 }
 
 .binary {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 8px;
     color: aqua;
 }
@@ -66,7 +67,7 @@ main {
     color: whitesmoke;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "intro intro"
         "stack tools"
         "fullstack fullstack"
