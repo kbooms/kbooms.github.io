@@ -65,19 +65,21 @@ main {
     padding: 10px;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: whitesmoke;
+}
+
+#main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "intro intro"
+        "header header"
         "stack tools"
-        "fullstack fullstack"
-        "desktop desktop"
-        "introduction introduction";
+        "skills skills"
+        "intro intro";
 }
 
-#intro {
+#headline {
     text-align: center;
-    grid-area: intro;
+    grid-area: header;
     justify-self: center;
 
 }
@@ -92,21 +94,35 @@ main {
     justify-self: center;
 }
 
-#skills img {
+#skills-grid {
+    display: grid;
     grid-area: skills;
-    max-width: 200px;
+    grid-template-columns: 1 fr 1fr;
+    grid-template-areas:
+        "fullstack desktop"
+        "frontend extra";
+    gap: 20px;
+    row-gap: 20px;
 }
 
-.fullstack {
+#skills-fullstack {
     grid-area: fullstack;
 }
 
-.desktop_app {
+#skills-desktop {
     grid-area: desktop;
 }
 
-#introduction {
-    grid-area: introduction;
+#skills-frontend {
+    grid-area: frontend;
+}
+
+#skills-extra {
+    grid-area: extra;
+}
+
+#intro {
+    grid-area: intro;
 }
 
 footer {
