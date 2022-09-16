@@ -64,17 +64,9 @@ main {
     padding: 10px;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: whitesmoke;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "intro intro"
-        "stack tools"
-        "fullstack fullstack"
-        "desktop desktop"
-        "introduction introduction";
 }
 
-#intro {
+/* #intro {
     text-align: center;
     grid-area: intro;
     justify-self: center;
@@ -89,24 +81,8 @@ main {
 #tools {
     grid-area: tools;
     justify-self: center;
-}
+} */
 
-#skills img {
-    grid-area: skills;
-    max-width: 200px;
-}
-
-.fullstack {
-    grid-area: fullstack;
-}
-
-.desktop_app {
-    grid-area: desktop;
-}
-
-#introduction {
-    grid-area: introduction;
-}
 
 footer {
     background-color: #001e64;
