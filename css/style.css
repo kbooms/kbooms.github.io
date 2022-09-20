@@ -4,9 +4,9 @@ body {
 }
 
 #header {
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
+    grid-template-areas: 
         "banner banner navmenu"
         "banner banner navmenu";
     padding: 10px;
@@ -21,7 +21,7 @@ body {
 }
 
 .binary {
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
     font-size: 8px;
     color: aqua;
 }
@@ -67,23 +67,9 @@ main {
     color: whitesmoke;
 }
 
-<<<<<<< HEAD
-/* #intro {
-=======
-#main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "header header"
-        "stack tools"
-        "skills skills"
-        "intro intro";
-}
-
-#headline {
->>>>>>> 65b870bfb391c432b1c29c9ae12e20513885d4af
+#intro {
     text-align: center;
-    grid-area: header;
+    grid-area: intro;
     justify-self: center;
 
 }
@@ -96,41 +82,8 @@ main {
 #tools {
     grid-area: tools;
     justify-self: center;
-} */
-
-<<<<<<< HEAD
-=======
-#skills-grid {
-    display: grid;
-    grid-area: skills;
-    grid-template-columns: 1 fr 1fr;
-    grid-template-areas:
-        "fullstack desktop"
-        "frontend extra";
-    gap: 20px;
-    row-gap: 20px;
 }
 
-#skills-fullstack {
-    grid-area: fullstack;
-}
-
-#skills-desktop {
-    grid-area: desktop;
-}
-
-#skills-frontend {
-    grid-area: frontend;
-}
-
-#skills-extra {
-    grid-area: extra;
-}
-
-#intro {
-    grid-area: intro;
-}
->>>>>>> 65b870bfb391c432b1c29c9ae12e20513885d4af
 
 footer {
     background-color: #001e64;
