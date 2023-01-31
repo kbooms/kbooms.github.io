@@ -25,6 +25,16 @@
 
         <!-- c'mon github -->
         <div class="blog">
+            <h3>1/31/2023</h3>
+            <p>
+                Alright. The Docker issue is fixed. I went through a lot of troubleshooting to get it running right. Docker recommends verifying that WSL2 and Windows Hypervisor(Hyper-V)
+                are enabled. After doing that I installed Docker Desktop. Once the install completed the application wouldn't fully start on the desktop, nor could I run docker compose in
+                a terminal window. After some error hunting I found that I needed to download an updated WSL package. After going through that I restarted my computer and it started working.
+                I was able to continue on finally with my Spring Boot 3 project and get the JDBC & JPA drivers set up, I also learned how to create a database from the command line using psql
+                commands. <br />
+                Since I spent so much time taking notes on Docker during this project I started a new <a href="https://github.com/kbooms/KnowledgeBase">KnowledgeBase repo</a> on Github and documented the install and troubleshoot process I went through.
+                This has already been a very challenging, but fun dive. Next up using JPA to create entities. But that's for tomorrow's me. I hope you're having a good day.
+            </p>
             <h3>1/30/2023</h3>
             <p>
                 So at this point I've installed Docker Desktop on my Windows 11 machine. But when I open the Desktop GUI, it seems to be stuck in "Docker is Starting..." mode.
