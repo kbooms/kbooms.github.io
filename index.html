@@ -14,207 +14,317 @@
 
 </head>
 
-    <body>
+<body>
 
-        <div class="header">
-            
-            <img src="img/bobbyzim-laugh.gif">
-            <p>A wild computer programmer appears!</p>
+    <div class="header">
 
-        </div>
+        <img src="img/bobbyzim-laugh.gif">
+        <p>A wild computer programmer appears!</p>
 
-        
-        <div class="blog">
-            <h3>2/2/2023</h3>
-            <p>
-                I've more or less finished my first dive into Spring Boot 3 now. I wrote an example server app with a CRUD API, except I don't quite have Update(PUT) figured out yet. It is
-                not written to true n-tier architecture, but this was a practice run to see what's different and changed. Plus I finally had a chance to do some work with JPA, and I got
-                Docker up and running despite a few hurdles of being a Windows user. I'm gonna do more or less the same thing again over the next few days, and play a bit with what goes where.
-                I'd like organize the architecture into actual MVC, and see what else JPA can do. It seems easier than writing to JDBC templates and having to write out SQL queries. Docker is
-                a whole different sea to jump into, but for this project it was a means to an end. Once I got through the troubleshooting of setting it up and docker-compose worked for me, that's 
-                where my exposure stopped.<br />
-                So here's my take away for January:<br />
-                <ul>
-                    <li>Spring Boot 3 so far doesn't seem too different than 2</li>
-                    <li>I've learned another method of writing a CRUD app using JPA</li> 
-                    <li>I've got my feet wet with Docker and containerization. I must explore this further</li>
-                    <li>I've learned how to utilize the terminal in my IDE to log into a Docker Container</li>
-                    <li>I've learned how to use psql within a terminal to connect to and query a database on a Command Line</li>
-                    <li>I've learned a bit about how to write configuration files for docker as .yml</li>
-                    <li>Indentation in .yml files is CRITICAL</li>
-                    <li>Google is your friend. Stackoverflow hates you, but it's also your friend</li>
-                    <li>It's a meticulous and slow process, but I absolutely love documenting every step of my work</li>
-                    <li>I'm getting better with Markdown as well</li>
-                </ul>
-                I'm going to be volunteering as a TA for Merit America starting next week, which is exciting. I get to work with some of my old fellow learners, and help new people start on this same journey.
-                I've joined a group of folks from my cohort as well on a long term project. We're building together and supporting eachother along the way. It feels nice. Wednesday I appeared on
-                <a href="https://www.youtube.com/@DonTheDeveloper">Don Hansen's</a> podcast, which was a very good experience, and a chance to shed a little light on the code bootcamp experience.
-                That episode should be airing towards the end of February. I've spent the month trying to get out of the burnout funk and back on the horse. I'm feeling better lately, and I'm making
-                daily commits. The habit is forming, and I'm hoping I can keep it up. Hope you're having a good day.<br />
-            </p>
-            <h3>1/31/2023</h3>
-            <p>
-                Alright. The Docker issue is fixed. I went through a lot of troubleshooting to get it running right. Docker recommends verifying that WSL2 and Windows Hypervisor(Hyper-V)
-                are enabled. After doing that I installed Docker Desktop. Once the install completed the application wouldn't fully start on the desktop, nor could I run docker compose in
-                a terminal window. After some error hunting I found that I needed to download an updated WSL package. After going through that I restarted my computer and it started working.
-                I was able to continue on finally with my Spring Boot 3 project and get the JDBC & JPA drivers set up, I also learned how to create a database from the command line using psql
-                commands. <br />
-                Since I spent so much time taking notes on Docker during this project I started a new <a href="https://github.com/kbooms/KnowledgeBase">KnowledgeBase repo</a> on Github and documented the install and troubleshoot process I went through.
-                This has already been a very challenging, but fun dive. Next up using JPA to create entities. But that's for tomorrow's me. I hope you're having a good day.
-            </p>
-            <h3>1/30/2023</h3>
-            <p>
-                So at this point I've installed Docker Desktop on my Windows 11 machine. But when I open the Desktop GUI, it seems to be stuck in "Docker is Starting..." mode.
-                When I try to do a 'docker compose up -d' command in the IntelliJ terminal I'm met with this error <br />
-                <img src="img/docker-error.png" /><br />
-                Not sure what it means by daemon, nor how to get Docker out of this funk. I'll likely be looking int it over the next few hours. If you see this and you have an
-                easy answer for me, feel free to email me, message me on LinkedIn, or find me on other social medias. I'm Kevin Booms practically everywhere. <br />
-                <br />
-                In other notable events, I'm going to be on a Podcast. Don of DonTheDeveloper.tv reached out to me recently about being a guest on his Boot Camp review episode this week. Should be a good
-                time. He hosts a pretty casual environment, and I'm looking forward to sharing my experience there. It also seems I'm going to be volunteering a few hours a month to TA for Merit America. 
-                I think it will help be a good resume builder. I'm hoping to hear more about it soon. I hope you're having a good day.<br />
-            </p>
-            <h3>1/27/2023</h3>
-            <p>
-                So in trying to get this Spring Boot 3 app underway, I've had to start diving into Docker and learning about containerization. I wrote some notes in a Changelog about it and
-                I'm hoping to get it up and running just enough to continue on with building this Spring Boot 3 app. I rejoined a group of aspiring developers that I had worked with during bootcamp
-                to help with another project in building a social media app. It felt good to be among peers again. I had been away from a network I'd spent 8 months building for too long.
-                I learned today that I can code HTML tags in Java, and in a browser window those tags would be properly rendered. Interesting concept for rendering a server whitepage. Whether or
-                not it's practical remains to be seen. But it was a fun discovery for me. Hope you're having a good day.
-            </p>
-            <h3>1/25/2023</h3>
-            <p>
-                Spring Boot 3 was released a few months ago now. It requires Java 17. I'm learning how to build an app in this environment to implement JWT and JPA. The road continues.<br>
-                I have no idea what purpose it will fulfill yet. Focus is difficult. I'm burnt out, and I've realized only recently that I'm barely ankle deep. It's a lot. But for now I'm
-                trying to keep my focus on keeping the fancy github boxes green. Even if it's just for a little while a day.
-            </p>
-            <h3>1/16/2023</h3>
-            <p>
-                I wrote a simple <a href="https://github.com/kbooms/ip-reader">program</a> today that consumes an API. This one being from <a href="https://myip.com">myip.com</a>, when called it will return your local IP address.
-                I'm hoping I can build a logger that logs unique IPs to help with building an accurate "hit" counter for my website. In my head it will help keep a more accurate count of
-                how many individual IPs make their way to the site. Fun stuff. Hope you're having a good day.  
-            </p>
-            <h3>1/4/2023</h3>
-            <p>
-                Hello out there. Happy New Year. I hope you're doing well.<br />
-                I got really sick right before Christmas. I did not code for at least two weeks. I feel incredibly bad for it.<br />
-                I tried to at times. But I think my brain needed a <strong>hard</strong> reset. I instead used my headspace to make it through the rest of the year.<br />
-                I fixed some things around my house, I spent some time with my family both immediate and extended, 
-                and once I had about 25 job applications out there I put about 30 hours into Vampire Survivors. Please forgive me.<br />
-                With the holidays over and my illness subsiding, I'm finally feeling like myself again. I'm getting motivated again.<br />
-                I'm trying to kick myself back into gear.
-            </p>
-            <h3>12/14/22</h3>
-            <p>
-                I've been delving through a lot of the old programs and code that I wrote during my bootcamp. Documenting what everything does, consolidating it all into one repository. It's now <a href="https://github.com/kbooms/java-programming">available</a> 
-                on my public Github. I've been busy applying for jobs as well ofcourse, but I'm planning out a rework/refactor of my Task list application. It's important because I want to finish and use it.
-                It just dawned on me that I wish we'd had some information on UML and modeling out applications. This would have been great to have, because I like to plan things out down to the detail. Mapping
-                my objectives out helps me finish them faster. Oh well. To Udemy I go. I'm sure there's something there I can use. Hope you're having a good day.
-            </p>
-            <h3>12/9/22</h3>
-            <p>
-                I logged a few extra bugs on <a href="https://github.com/kbooms/Taskmin">Taskmin</a>. I've got some work to do that. I was able to get a Spring Boot base app up and persisting for my Item
-                Shop, but other than get it standing I haven't really been able to work on it much more. I'm not committing it until I've had a chance to work on it more and clean up some of the code. 
-                I've taken a few days off since graduation. A lots happened between family birthdays and it's also the holiday season. I'm trying to get back in the swing of things, as I need to be ready. I've 
-                sent out about 12 applications so far, and most of it was in the past few days. I've already received one rejection, and that's fine. I only need one company to say yes and give me a chance. 
-                I'm out for the moment. Hope you have a good weekend.
-            </p>
-            <h3>12/5/22</h3>
-            <p>
-                HI EVERYBODY! I'M BACK! Alright let's have a recap:<br />
-                So I left off just before I had started my capstone project. Now the capstone was... a lot. I focused mostly on the backend of it however. Our project was a Tinder-like Restaurant finder.
-                Users would be able to search from a list of restaurants based on their area by City or Zipcode, as well as searching by cuisine type. That was my main focus for the project, building the 
-                API that would search through the Database. I had a lot of struggle getting it running as I basically had to relearn the whole Server-Side API lessons from Module 2 all over again. This 
-                isn't a bad thing. Just what I needed to get the job done. I built the API out in about two weeks, and it was... functional at best. My API does not want to return results when searched
-                with all lowercase letters. I still haven't quite figured that part out yet. Nothing worth worrying about at this point. On December 1st, the team and I presented our MVP. The presentation
-                of what we had went well, our coaches and advisors had good remarks for us.<br />
-                <br />
-                But enough about that. I finished Merit America and now I'm here in the Job Success Phase. The trouble with the Merit America course is there wasn't really time to apply the concepts I'd 
-                learned into things that interested me. This capstone was unfortunately no different. I don't know that I will continue to work on it. I will however take what I've learned from this course, 
-                and build my own programs with it. And apart from applying for jobs, THAT is what I've been doing since December 1st. Now a bit about that:</p>
-                <h4>Taskmin</h4>
-                <p>Taskmin is my personal ToDo application I've been writing since around the middle of Immersions 1 in Merit America. The objective is a quick and responsive list generator that can save lists
-                and load them from .txt files. When I left that off I had a working list controller, and the program can save and load files. However loading a file does not clear out the previously loaded
-                list. And the code is very very spaghetti flavored. From here I need to fix the file management, and do more code encapsulation. I also found something called 'JColor' that allows control of
-                text and background color in terminal applications with Unicode. I'd love to implement that into this ToDo app to give it a bit more personality.<br />
-                The source code for Taskmin is available here: <a href="https://github.com/kbooms/Taskmin">https://github.com/kbooms/Taskmin</a></p>
-                <h4>UO Gem Calculator</h4>
-                <p>Ultima Online (or UO) is a 26 year old Wizard game where you fight monsters, get loot, and increase your character's power levels. Pretty standard MMO formula. Gems are part of the loot you can
-                find, there are nine different gems, each with their own individual value. I wrote a simple calculator program that asks the user to enter the quantity of all different gems they possess, and
-                it will calculate the in-game gold value of said gems. Currently everything is entered manually, and the program works well enough. To flesh it out, I'd like to be able to make it interactive
-                with the game itself somehow. If I can find anywhere in the game's file system where a log is generated I just might be able to pull something off where all a user has to do is click a bag of gems in
-                the game and the program will calculate the value without manual input of each type.<br />
-                You can check it out here: <a href="https://github.com/kbooms/uo-gemvalue-calc">https://github.com/kbooms/uo-gemvalue-calc</a></p>
-                <h4>The Item Shop</h4>
-                <p>During my time at Merit America I spent a lot of time researching projects and ideas to make for portfolio projects. A lot of the different sources I found, suggested "make a store, and sell
-                fake products." A lot of the approach I've seen is to list watches or other real products with ridiculously fake prices. And as I've already stated, if it doesn't interest me I probably won't like
-                doing it. However, an Item Shop from an RPG? This absolute nerd can definitely work with parameters like that. So I'm building an RPG-like item shop. This started as a way for me to review Data Access
-                and the DAO pattern as well as Database design. It will eventually be a full-stack project that I'll deploy, but for now I'm modeling it as a Terminal Client app similar to the TEnmo project from
-                Immersions 1.<br />
-                You can see the project so far here: <a href="https://github.com/kbooms/RPGStore">https://github.com/kbooms/RPGStore</a></p>
-                <br />
-                I guess that's about it for now. I made it through 7 months of Code Bootcamp. It was exhausting, beneficial, and fun to a fault. Now I'm just trying to find that first role, and build projects. I've
-                I've also been making up for lost time with my family. Bootcamp largely kept me away from those that need me most. Also my house desperately needs my attention, and I have a long list of things to fix.
-                I'm ready for a somewhat return to normal. It's definitely been nice having the personal time back. I'm gonna stop writing and get back to coding. Much to do. Wherever you are, whatever you're doing,
-                I hope you're having a good day. 'Til next time folks.
-            </p>
+    </div>
 
-            <h3>10/25/22</h3>
-            <p>
-                Doing a layout update. A lot of my previous writing was cut and archived for now. When I figure out how to set up an actual blog app, I'll add it back somehow for anyone interested in 
-                the nonsensical ravings of a lunatic mind. This things been up for over a month, and I haven't really had any time to actually get it as flashy as I had hoped to be able to. Bootcamp 
-                just keeps me too busy. 4 more weeks and it's over. I can do anything for 4 more weeks right?<br />
-                <br />
-                Here's what I'm planning to do once I finish bootcamp (in somewhat particular order):
-                <ul>
-                    <li>Apply for at least one job a day</li>
-                    <li>Go back into Java Core/Fundamentals</li>
-                    <li>Relearn how to use JDBC and the Spring Framework</li>
-                    <li>Build a few API projects</li>
-                    <li>Recreate this website, possibly in React</li>
-                </ul>
-                Among several ever things like learning how to deploy apps on AWS, how to use Kubernetes, Docker, Jenkins, and other tools. There's a whole lot of Java to tackle. But for now I'm going
-                to try and keep my focus on the main things here:
-            </p>
-            <h4>Apply for at least one job a day</h4>
-            <p>Bottom line, I want a job in software development. I love coding, I love documenting, and I love the process. This is something I can see myself thriving in. In order to get a job I have
-                to apply. It shouldn't matter to me where my skills are at the time, I've done this before, I can do it again. As long I keep trying to learn, I will be successful.
-            </p>
-            <h4>Go back into Java Core/Fundamentals</h4>
-            <p>It's been over 8 weeks since I've touched Java, and though I can see the code in my head, my fundamentals are probably pretty rusty. I'll need to spend a day or two getting back up to
-                speed on everything we went over in the first module. I built a rough task-list application based on that knowledge alone, but it's in a buggy state, and I want to finish it. I think
-                that'd be a good personal capstone to the basics.
-            </p>
-            <h4>Relearn how to use JDBC and the Spring Framework</h4>
-            <p>This is pretty much going to be the bread and butter for a minute. I need to refresh on how to write code that consumes an API as well as how to write my own APIs for consumption. This
-                was arguably one of my favorite parts of the whole program, creating that inter-connectivity of various services. TEnmo was only the beginning.
-            </p>
-            <h4>Build a few API projects</h4>
-            <p>Gotta put what I learned to use. I want to build a few API projects such as a Messenger API, and I had an idea for an API that when used would generate a random Trading card that could then be
-                saved to a private collection. There's also a number of free public APIs that I can play around with.
-            </p>
-            <h4>Recreate this website, possibly in React</h4>
-            <p>I have a website in mind. I'd like to make it. I could make it with bare HTML, CSS, and some JavaScript. But maybe, just maybe, I can do it in React. Maybe not. I have have no idea how that 
-                will play out for me yet. React hasn't been the easiest to pick up, and I definitely have a long way to go before my grasp of JavaScript is firm.
-            </p>
-            <p>I'm tired, and this bootcamp has been a long road. Only a little while longer. Anyways, I hope you're having a good day.</p>
 
-        <h3>10/18/22</h3>
-        <p>Tonight was our last Professional Squad, and it was quite bittersweet. We had a lot of time to share some of our thoughts and reflections on the past 27 weeks that we've been at this. Some
-            of us still feel discouraged about everything, like they don't know enough or understand enough. Resoundingly however it sounded like no one here is going to be sitting idly. This cohort is
-            stocked full of many dedicated learners. For a lot of us, Merit America completely reignited our love of learning. It was certainly the push I needed to actually dedicate myself to learning
-            how to code. And now there's definitely no stopping me because there's so much I want to know. There's also so much I have to relearn. I haven't worked on anything in Java for over 7 weeks
-            and I'm worried about forgetting everything I learned in Module 1 and 2, which was all of the Java and Backend programming. I want to build an API, several actually. Many of my fellow 
-            learners are hoping to get right into the field (myself included). But even if I don't wind up with a job right away I already have my sights set on my next objectives. I've said it many
-            times since we rounded the third module, and it's that I'll be ecstatic to just have the time back. Being regularly available to my life outside of code again will be a great gift to me.<br />
-            React week 3 is intense. Going over state, router, props again, arrays, forms, etc. Scrimba crammed a lot into this weeks lessons. Basically double the video length alone from the previous
-            two. It's going alright, and I feel as though I'm grasping it. I managed to write at least an entire static webpage with React so I'm sure I'll grasp all of this with practice.<br />
+    <div class="blog">
+        <h3>2/4/2023</h3>
+        <p>
+            Had a busy day in the real world so no real coding got done Friday. It happens. I'm making this update at
+            1:00am(ish). Just a little playing around tonight before bed. <br />
+            <br />
+            So I've learned that just using Strings alone, you can kind of render HTML tags. I feel like I knew this a
+            bit from bootcamp, but never really tried anything with it. Until now. <br />
+            <br />
+            So I made a couple String constants as basic HTML tags, and was able to alter the whitepage. Now instead of
+            an error, the server greets you. It's not much, but I think it's neat. <a
+                href="https://github.com/kbooms/server-test">Check it out here</a> if you like<br />
+            <br />
+            I'm gonna spend most of this morning hitting at my job application goals. Then I have a team meeting in the
+            afternoon
+            to discuss web scraping. Which is a topic I've had on my radar, but haven't gotten around to it yet. So I'm
+            looking forward to that.
+            But I need to get to bed before I regret how late I stayed up. Hope you all have a good day.
+        </p>
+        <h3>2/2/2023</h3>
+        <p>
+            I've more or less finished my first dive into Spring Boot 3 now. I wrote an example server app with a CRUD
+            API, except I don't quite have Update(PUT) figured out yet. It is
+            not written to true n-tier architecture, but this was a practice run to see what's different and changed.
+            Plus I finally had a chance to do some work with JPA, and I got
+            Docker up and running despite a few hurdles of being a Windows user. I'm gonna do more or less the same
+            thing again over the next few days, and play a bit with what goes where.
+            I'd like organize the architecture into actual MVC, and see what else JPA can do. It seems easier than
+            writing to JDBC templates and having to write out SQL queries. Docker is
+            a whole different sea to jump into, but for this project it was a means to an end. Once I got through the
+            troubleshooting of setting it up and docker-compose worked for me, that's
+            where my exposure stopped.<br />
+            So here's my take away for January:<br />
+        <ul>
+            <li>Spring Boot 3 so far doesn't seem too different than 2</li>
+            <li>I've learned another method of writing a CRUD app using JPA</li>
+            <li>I've got my feet wet with Docker and containerization. I must explore this further</li>
+            <li>I've learned how to utilize the terminal in my IDE to log into a Docker Container</li>
+            <li>I've learned how to use psql within a terminal to connect to and query a database on a Command Line</li>
+            <li>I've learned a bit about how to write configuration files for docker as .yml</li>
+            <li>Indentation in .yml files is CRITICAL</li>
+            <li>Google is your friend. Stackoverflow hates you, but it's also your friend</li>
+            <li>It's a meticulous and slow process, but I absolutely love documenting every step of my work</li>
+            <li>I'm getting better with Markdown as well</li>
+        </ul>
+        I'm going to be volunteering as a TA for Merit America starting next week, which is exciting. I get to work with
+        some of my old fellow learners, and help new people start on this same journey.
+        I've joined a group of folks from my cohort as well on a long term project. We're building together and
+        supporting eachother along the way. It feels nice. Wednesday I appeared on
+        <a href="https://www.youtube.com/@DonTheDeveloper">Don Hansen's</a> podcast, which was a very good experience,
+        and a chance to shed a little light on the code bootcamp experience.
+        That episode should be airing towards the end of February. I've spent the month trying to get out of the burnout
+        funk and back on the horse. I'm feeling better lately, and I'm making
+        daily commits. The habit is forming, and I'm hoping I can keep it up. Hope you're having a good day.<br />
+        </p>
+        <h3>1/31/2023</h3>
+        <p>
+            Alright. The Docker issue is fixed. I went through a lot of troubleshooting to get it running right. Docker
+            recommends verifying that WSL2 and Windows Hypervisor(Hyper-V)
+            are enabled. After doing that I installed Docker Desktop. Once the install completed the application
+            wouldn't fully start on the desktop, nor could I run docker compose in
+            a terminal window. After some error hunting I found that I needed to download an updated WSL package. After
+            going through that I restarted my computer and it started working.
+            I was able to continue on finally with my Spring Boot 3 project and get the JDBC & JPA drivers set up, I
+            also learned how to create a database from the command line using psql
+            commands. <br />
+            Since I spent so much time taking notes on Docker during this project I started a new <a
+                href="https://github.com/kbooms/KnowledgeBase">KnowledgeBase repo</a> on Github and documented the
+            install and troubleshoot process I went through.
+            This has already been a very challenging, but fun dive. Next up using JPA to create entities. But that's for
+            tomorrow's me. I hope you're having a good day.
+        </p>
+        <h3>1/30/2023</h3>
+        <p>
+            So at this point I've installed Docker Desktop on my Windows 11 machine. But when I open the Desktop GUI, it
+            seems to be stuck in "Docker is Starting..." mode.
+            When I try to do a 'docker compose up -d' command in the IntelliJ terminal I'm met with this error <br />
+            <img src="img/docker-error.png" /><br />
+            Not sure what it means by daemon, nor how to get Docker out of this funk. I'll likely be looking int it over
+            the next few hours. If you see this and you have an
+            easy answer for me, feel free to email me, message me on LinkedIn, or find me on other social medias. I'm
+            Kevin Booms practically everywhere. <br />
+            <br />
+            In other notable events, I'm going to be on a Podcast. Don of DonTheDeveloper.tv reached out to me recently
+            about being a guest on his Boot Camp review episode this week. Should be a good
+            time. He hosts a pretty casual environment, and I'm looking forward to sharing my experience there. It also
+            seems I'm going to be volunteering a few hours a month to TA for Merit America.
+            I think it will help be a good resume builder. I'm hoping to hear more about it soon. I hope you're having a
+            good day.<br />
+        </p>
+        <h3>1/27/2023</h3>
+        <p>
+            So in trying to get this Spring Boot 3 app underway, I've had to start diving into Docker and learning about
+            containerization. I wrote some notes in a Changelog about it and
+            I'm hoping to get it up and running just enough to continue on with building this Spring Boot 3 app. I
+            rejoined a group of aspiring developers that I had worked with during bootcamp
+            to help with another project in building a social media app. It felt good to be among peers again. I had
+            been away from a network I'd spent 8 months building for too long.
+            I learned today that I can code HTML tags in Java, and in a browser window those tags would be properly
+            rendered. Interesting concept for rendering a server whitepage. Whether or
+            not it's practical remains to be seen. But it was a fun discovery for me. Hope you're having a good day.
+        </p>
+        <h3>1/25/2023</h3>
+        <p>
+            Spring Boot 3 was released a few months ago now. It requires Java 17. I'm learning how to build an app in
+            this environment to implement JWT and JPA. The road continues.<br>
+            I have no idea what purpose it will fulfill yet. Focus is difficult. I'm burnt out, and I've realized only
+            recently that I'm barely ankle deep. It's a lot. But for now I'm
+            trying to keep my focus on keeping the fancy github boxes green. Even if it's just for a little while a day.
+        </p>
+        <h3>1/16/2023</h3>
+        <p>
+            I wrote a simple <a href="https://github.com/kbooms/ip-reader">program</a> today that consumes an API. This
+            one being from <a href="https://myip.com">myip.com</a>, when called it will return your local IP address.
+            I'm hoping I can build a logger that logs unique IPs to help with building an accurate "hit" counter for my
+            website. In my head it will help keep a more accurate count of
+            how many individual IPs make their way to the site. Fun stuff. Hope you're having a good day.
+        </p>
+        <h3>1/4/2023</h3>
+        <p>
+            Hello out there. Happy New Year. I hope you're doing well.<br />
+            I got really sick right before Christmas. I did not code for at least two weeks. I feel incredibly bad for
+            it.<br />
+            I tried to at times. But I think my brain needed a <strong>hard</strong> reset. I instead used my headspace
+            to make it through the rest of the year.<br />
+            I fixed some things around my house, I spent some time with my family both immediate and extended,
+            and once I had about 25 job applications out there I put about 30 hours into Vampire Survivors. Please
+            forgive me.<br />
+            With the holidays over and my illness subsiding, I'm finally feeling like myself again. I'm getting
+            motivated again.<br />
+            I'm trying to kick myself back into gear.
+        </p>
+        <h3>12/14/22</h3>
+        <p>
+            I've been delving through a lot of the old programs and code that I wrote during my bootcamp. Documenting
+            what everything does, consolidating it all into one repository. It's now <a
+                href="https://github.com/kbooms/java-programming">available</a>
+            on my public Github. I've been busy applying for jobs as well ofcourse, but I'm planning out a
+            rework/refactor of my Task list application. It's important because I want to finish and use it.
+            It just dawned on me that I wish we'd had some information on UML and modeling out applications. This would
+            have been great to have, because I like to plan things out down to the detail. Mapping
+            my objectives out helps me finish them faster. Oh well. To Udemy I go. I'm sure there's something there I
+            can use. Hope you're having a good day.
+        </p>
+        <h3>12/9/22</h3>
+        <p>
+            I logged a few extra bugs on <a href="https://github.com/kbooms/Taskmin">Taskmin</a>. I've got some work to
+            do that. I was able to get a Spring Boot base app up and persisting for my Item
+            Shop, but other than get it standing I haven't really been able to work on it much more. I'm not committing
+            it until I've had a chance to work on it more and clean up some of the code.
+            I've taken a few days off since graduation. A lots happened between family birthdays and it's also the
+            holiday season. I'm trying to get back in the swing of things, as I need to be ready. I've
+            sent out about 12 applications so far, and most of it was in the past few days. I've already received one
+            rejection, and that's fine. I only need one company to say yes and give me a chance.
+            I'm out for the moment. Hope you have a good weekend.
+        </p>
+        <h3>12/5/22</h3>
+        <p>
+            HI EVERYBODY! I'M BACK! Alright let's have a recap:<br />
+            So I left off just before I had started my capstone project. Now the capstone was... a lot. I focused mostly
+            on the backend of it however. Our project was a Tinder-like Restaurant finder.
+            Users would be able to search from a list of restaurants based on their area by City or Zipcode, as well as
+            searching by cuisine type. That was my main focus for the project, building the
+            API that would search through the Database. I had a lot of struggle getting it running as I basically had to
+            relearn the whole Server-Side API lessons from Module 2 all over again. This
+            isn't a bad thing. Just what I needed to get the job done. I built the API out in about two weeks, and it
+            was... functional at best. My API does not want to return results when searched
+            with all lowercase letters. I still haven't quite figured that part out yet. Nothing worth worrying about at
+            this point. On December 1st, the team and I presented our MVP. The presentation
+            of what we had went well, our coaches and advisors had good remarks for us.<br />
+            <br />
+            But enough about that. I finished Merit America and now I'm here in the Job Success Phase. The trouble with
+            the Merit America course is there wasn't really time to apply the concepts I'd
+            learned into things that interested me. This capstone was unfortunately no different. I don't know that I
+            will continue to work on it. I will however take what I've learned from this course,
+            and build my own programs with it. And apart from applying for jobs, THAT is what I've been doing since
+            December 1st. Now a bit about that:
+        </p>
+        <h4>Taskmin</h4>
+        <p>Taskmin is my personal ToDo application I've been writing since around the middle of Immersions 1 in Merit
+            America. The objective is a quick and responsive list generator that can save lists
+            and load them from .txt files. When I left that off I had a working list controller, and the program can
+            save and load files. However loading a file does not clear out the previously loaded
+            list. And the code is very very spaghetti flavored. From here I need to fix the file management, and do more
+            code encapsulation. I also found something called 'JColor' that allows control of
+            text and background color in terminal applications with Unicode. I'd love to implement that into this ToDo
+            app to give it a bit more personality.<br />
+            The source code for Taskmin is available here: <a
+                href="https://github.com/kbooms/Taskmin">https://github.com/kbooms/Taskmin</a></p>
+        <h4>UO Gem Calculator</h4>
+        <p>Ultima Online (or UO) is a 26 year old Wizard game where you fight monsters, get loot, and increase your
+            character's power levels. Pretty standard MMO formula. Gems are part of the loot you can
+            find, there are nine different gems, each with their own individual value. I wrote a simple calculator
+            program that asks the user to enter the quantity of all different gems they possess, and
+            it will calculate the in-game gold value of said gems. Currently everything is entered manually, and the
+            program works well enough. To flesh it out, I'd like to be able to make it interactive
+            with the game itself somehow. If I can find anywhere in the game's file system where a log is generated I
+            just might be able to pull something off where all a user has to do is click a bag of gems in
+            the game and the program will calculate the value without manual input of each type.<br />
+            You can check it out here: <a
+                href="https://github.com/kbooms/uo-gemvalue-calc">https://github.com/kbooms/uo-gemvalue-calc</a></p>
+        <h4>The Item Shop</h4>
+        <p>During my time at Merit America I spent a lot of time researching projects and ideas to make for portfolio
+            projects. A lot of the different sources I found, suggested "make a store, and sell
+            fake products." A lot of the approach I've seen is to list watches or other real products with ridiculously
+            fake prices. And as I've already stated, if it doesn't interest me I probably won't like
+            doing it. However, an Item Shop from an RPG? This absolute nerd can definitely work with parameters like
+            that. So I'm building an RPG-like item shop. This started as a way for me to review Data Access
+            and the DAO pattern as well as Database design. It will eventually be a full-stack project that I'll deploy,
+            but for now I'm modeling it as a Terminal Client app similar to the TEnmo project from
+            Immersions 1.<br />
+            You can see the project so far here: <a
+                href="https://github.com/kbooms/RPGStore">https://github.com/kbooms/RPGStore</a></p>
+        <br />
+        I guess that's about it for now. I made it through 7 months of Code Bootcamp. It was exhausting, beneficial, and
+        fun to a fault. Now I'm just trying to find that first role, and build projects. I've
+        I've also been making up for lost time with my family. Bootcamp largely kept me away from those that need me
+        most. Also my house desperately needs my attention, and I have a long list of things to fix.
+        I'm ready for a somewhat return to normal. It's definitely been nice having the personal time back. I'm gonna
+        stop writing and get back to coding. Much to do. Wherever you are, whatever you're doing,
+        I hope you're having a good day. 'Til next time folks.
         </p>
 
-        
+        <h3>10/25/22</h3>
+        <p>
+            Doing a layout update. A lot of my previous writing was cut and archived for now. When I figure out how to
+            set up an actual blog app, I'll add it back somehow for anyone interested in
+            the nonsensical ravings of a lunatic mind. This things been up for over a month, and I haven't really had
+            any time to actually get it as flashy as I had hoped to be able to. Bootcamp
+            just keeps me too busy. 4 more weeks and it's over. I can do anything for 4 more weeks right?<br />
+            <br />
+            Here's what I'm planning to do once I finish bootcamp (in somewhat particular order):
+        <ul>
+            <li>Apply for at least one job a day</li>
+            <li>Go back into Java Core/Fundamentals</li>
+            <li>Relearn how to use JDBC and the Spring Framework</li>
+            <li>Build a few API projects</li>
+            <li>Recreate this website, possibly in React</li>
+        </ul>
+        Among several ever things like learning how to deploy apps on AWS, how to use Kubernetes, Docker, Jenkins, and
+        other tools. There's a whole lot of Java to tackle. But for now I'm going
+        to try and keep my focus on the main things here:
+        </p>
+        <h4>Apply for at least one job a day</h4>
+        <p>Bottom line, I want a job in software development. I love coding, I love documenting, and I love the process.
+            This is something I can see myself thriving in. In order to get a job I have
+            to apply. It shouldn't matter to me where my skills are at the time, I've done this before, I can do it
+            again. As long I keep trying to learn, I will be successful.
+        </p>
+        <h4>Go back into Java Core/Fundamentals</h4>
+        <p>It's been over 8 weeks since I've touched Java, and though I can see the code in my head, my fundamentals are
+            probably pretty rusty. I'll need to spend a day or two getting back up to
+            speed on everything we went over in the first module. I built a rough task-list application based on that
+            knowledge alone, but it's in a buggy state, and I want to finish it. I think
+            that'd be a good personal capstone to the basics.
+        </p>
+        <h4>Relearn how to use JDBC and the Spring Framework</h4>
+        <p>This is pretty much going to be the bread and butter for a minute. I need to refresh on how to write code
+            that consumes an API as well as how to write my own APIs for consumption. This
+            was arguably one of my favorite parts of the whole program, creating that inter-connectivity of various
+            services. TEnmo was only the beginning.
+        </p>
+        <h4>Build a few API projects</h4>
+        <p>Gotta put what I learned to use. I want to build a few API projects such as a Messenger API, and I had an
+            idea for an API that when used would generate a random Trading card that could then be
+            saved to a private collection. There's also a number of free public APIs that I can play around with.
+        </p>
+        <h4>Recreate this website, possibly in React</h4>
+        <p>I have a website in mind. I'd like to make it. I could make it with bare HTML, CSS, and some JavaScript. But
+            maybe, just maybe, I can do it in React. Maybe not. I have have no idea how that
+            will play out for me yet. React hasn't been the easiest to pick up, and I definitely have a long way to go
+            before my grasp of JavaScript is firm.
+        </p>
+        <p>I'm tired, and this bootcamp has been a long road. Only a little while longer. Anyways, I hope you're having
+            a good day.</p>
 
-        </div>
-        
-    </body>
+        <h3>10/18/22</h3>
+        <p>Tonight was our last Professional Squad, and it was quite bittersweet. We had a lot of time to share some of
+            our thoughts and reflections on the past 27 weeks that we've been at this. Some
+            of us still feel discouraged about everything, like they don't know enough or understand enough.
+            Resoundingly however it sounded like no one here is going to be sitting idly. This cohort is
+            stocked full of many dedicated learners. For a lot of us, Merit America completely reignited our love of
+            learning. It was certainly the push I needed to actually dedicate myself to learning
+            how to code. And now there's definitely no stopping me because there's so much I want to know. There's also
+            so much I have to relearn. I haven't worked on anything in Java for over 7 weeks
+            and I'm worried about forgetting everything I learned in Module 1 and 2, which was all of the Java and
+            Backend programming. I want to build an API, several actually. Many of my fellow
+            learners are hoping to get right into the field (myself included). But even if I don't wind up with a job
+            right away I already have my sights set on my next objectives. I've said it many
+            times since we rounded the third module, and it's that I'll be ecstatic to just have the time back. Being
+            regularly available to my life outside of code again will be a great gift to me.<br />
+            React week 3 is intense. Going over state, router, props again, arrays, forms, etc. Scrimba crammed a lot
+            into this weeks lessons. Basically double the video length alone from the previous
+            two. It's going alright, and I feel as though I'm grasping it. I managed to write at least an entire static
+            webpage with React so I'm sure I'll grasp all of this with practice.<br />
+        </p>
+
+
+
+    </div>
+
+</body>
 
 </html>
