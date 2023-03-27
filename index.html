@@ -23,8 +23,53 @@
 
     </div>
     <div class="blog-post">
+        <h3>3/27/23</h3>
+        <h4>Enums</h4>
+        <p>
+            I can't believe I haven't worked with enums before. We were introduced to this in a video during bootcamp.
+            But we were never actually given any work to do with enums. Writing a CLI is so much easier this way, and it
+            doesn't bloat classes piles and piles of String constants. I can give the enums parameters such Strings, I
+            can iterate through them, and I can call them pretty much anywhere. These are a handy class to utilize. I
+            should have gotten to it sooner. I should go back to Taskmin and refactor my menu code there to use Enums.
+            Speaking of...
+        </p>
+        <h4>Taskmin</h4>
+        <p>
+            I added instructions to the README for Taskmin for how to run the compiled app in your command line. I've
+            been meaning to write up about it a bit more. Getting this app compiled turned out to be more of a journey
+            than I expected. But worth it. Here's what happened.<br />
+            <br />
+            Typically when you go to compile a java class, the simplest way to do it is the 'javac class_name.java'
+            command. For an entire Maven project this alone will probably not work if your classes call upon multiple
+            dependecies. Javac apparently does not find them. Fortunately Maven has a build command you can run called
+            'mvn clean package' which you run at the root directory of your Maven project and it will compile your
+            project from there. But when I tried to run it I was presented with some errors.<br />
+            I needed a build profile
+            and two plugins in my pom.xml file. The Maven Compiler plugin and the Maven Shade plugin. The compiler
+            plugin specifies the Java version to compile the project with, and ensure that the compiled classes are
+            compatible with that version. The Shade plugin to create a JAR that includes all the required dependencies
+            and is a single executable JAR file.<br />
+            Not to be the only snag I hit, I also found I needed to update my JDK from 11 to 17 still on my Desktop.
+            After downloading the new JDK 17 and setting the JAVA_HOME path variable in my Environment Variables and
+            rerunning the 'mvn clean package' command, the project finally compiled successfully. And now when you clone
+            Taskmin the easiest way to run it is in a Command Prompt window with the command 'java -jar taskmin.jar'
+        </p>
+        <p>
+            Hope you're having a good day.
+        </p>
+    </div>
+    <div class="blog-post">
         <h3>3/26/23</h3>
-        <p>Had quite a productive day on Saturday. I originally compiled Taskmin with a note at the main menu which said Loading a list is not implemented. This was actually implemented a while back, and is functioning as intended. I also started building a Database for the Item Shop CRUD app I tried to start building toward the end of Bootcamp. I got some tables created and populated them with some mock data for now. I then went to implement a little connectivity to the Database with a Java program using the Spring Framework JDBC api. I'm able to get a list of Items, and a list of Orders. Not a bad start for my next big project. Hope you have a good start to your week.</p>
+        <p>
+            Had quite a productive day on Saturday. I originally compiled Taskmin with a note at the main menu which
+            said
+            Loading a list is not implemented. This was actually implemented a while back, and is functioning as
+            intended. I also started building a Database for the Item Shop CRUD app I tried to start building toward the
+            end of Bootcamp. I got some tables created and populated them with some mock data for now. I then went to
+            implement a little connectivity to the Database with a Java program using the Spring Framework JDBC api. I'm
+            able to get a list of Items, and a list of Orders. Not a bad start for my next big project. Hope you have a
+            good start to your week.
+        </p>
     </div>
     <div class="blog-post">
         <h3>3/20/23</h3>
